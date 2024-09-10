@@ -412,7 +412,7 @@ $$
 
 ### 公式总结
 
-公式 \(\mathcal{L}\{f^{(n)}(t)\}$ 将高阶导数的拉普拉斯变换分解为两部分：
+公式  $\mathcal{L}\{f^{(n)}(t)\}$ 将高阶导数的拉普拉斯变换分解为两部分：
 
 1. **主项**：$s^n F(s)$，这部分体现了频率域中高阶导数的影响。
 2. **初始条件项**：每个初始条件 $f(0), f'(0), \dots, f^{(n-1)}(0)$ 分别乘以 $s$ 的不同次幂，反映了初始条件对系统动态的影响。
@@ -436,6 +436,162 @@ $$
 
 
 拉普拉斯变换中有两条非常重要的性质——**初值定理**和**终值定理**，它们利用极限来帮助我们确定一个函数在 $t = 0$ 时和 $t \to \infty$ 时的行为。这两条定理在分析控制系统时非常有用，尤其是在系统响应的初始条件和最终稳态的分析中。
+
+
+### 关于频率里面的微积分性质
+
+
+**频域内的微分性质和积分性质**
+
+在拉普拉斯变换中，频域内的微分和积分性质描述了频域函数  $F(s)$  与时域函数  $f(t)$  之间的关系。这些性质对于分析控制系统的动态特性非常有用。下面我们详细介绍并推导这些性质。
+
+### 一、频域微分性质
+
+**性质：**
+
+若  $F(s) = \mathcal{L}\{ f(t) \}$ ，则：
+
+$$
+\mathcal{L}\{ t f(t) \} = -\frac{dF(s)}{ds}
+$$
+
+**解释：**
+
+在时域中，函数  $f(t)$  乘以  $t$  相当于在频域中对  $F(s)$  求导数并取负。
+
+**推导过程：**
+
+从拉普拉斯变换的定义出发：
+
+$$
+F(s) = \int_0^\infty e^{-st} f(t) \, dt
+$$
+
+对  $F(s)$  关于  $s$  求导：
+
+$$
+\frac{dF(s)}{ds} = \frac{d}{ds} \left( \int_0^\infty e^{-st} f(t) \, dt \right)
+$$
+
+交换微分和积分（在满足条件下）：
+
+$$
+\frac{dF(s)}{ds} = \int_0^\infty \frac{d}{ds} \left( e^{-st} \right) f(t) \, dt
+$$
+
+计算  $e^{-st}$  关于  $s$  的导数：
+
+$$
+\frac{d}{ds} \left( e^{-st} \right) = -t e^{-st}
+$$
+
+因此：
+
+$$
+\frac{dF(s)}{ds} = \int_0^\infty (-t e^{-st}) f(t) \, dt = - \int_0^\infty t e^{-st} f(t) \, dt
+$$
+
+所以：
+
+$$
+- \frac{dF(s)}{ds} = \int_0^\infty t e^{-st} f(t) \, dt = \mathcal{L}\{ t f(t) \}
+$$
+
+**结论：**
+
+$$
+\mathcal{L}\{ t f(t) \} = -\frac{dF(s)}{ds}
+$$
+
+这个性质表明，在时域中乘以  $t$  相当于在频域中对拉普拉斯变换  $F(s)$  求导并取负。
+
+**拓展到高阶：**
+
+对于任意正整数  $n$ ：
+
+$$
+\mathcal{L}\{ t^n f(t) \} = (-1)^n \frac{d^n F(s)}{ds^n}
+$$
+
+---
+
+### 二、频域积分性质
+
+**性质：**
+
+若  $ F(s) = \mathcal{L}\{ f(t) \} $ ，则：
+
+$$
+\mathcal{L}\left\{ \frac{f(t)}{t} \right\} = \int_s^\infty F(\sigma) \, d\sigma
+$$
+
+**解释：**
+
+在时域中将函数  $ f(t) $  除以  $ t $ ，相当于在频域中对  $ F(s) $  从  $ s $  积分到无穷大。
+
+**推导过程：**
+
+从拉普拉斯变换的基本性质出发，我们知道：
+
+$$
+\mathcal{L}\{ f(t) \} = F(s)
+$$
+
+考虑到频域内的积分，我们引入以下关系：
+
+$$
+\int_s^\infty F(\sigma) \, d\sigma = \int_s^\infty \left( \int_0^\infty e^{-\sigma t} f(t) \, dt \right) d\sigma
+$$
+
+交换积分顺序（在满足条件下）：
+
+$$
+= \int_0^\infty f(t) \left( \int_s^\infty e^{-\sigma t} \, d\sigma \right) dt
+$$
+
+计算内积分：
+
+$$
+\int_s^\infty e^{-\sigma t} \, d\sigma = \left[ \frac{e^{-\sigma t}}{ -t } \right]_s^\infty = \frac{e^{-s t}}{t}
+$$
+
+因此：
+
+$$
+\int_s^\infty F(\sigma) \, d\sigma = \int_0^\infty f(t) \cdot \frac{e^{-s t}}{t} \, dt = \mathcal{L}\left\{ \frac{f(t)}{t} \right\}
+$$
+
+**结论：**
+
+$$
+\mathcal{L}\left\{ \frac{f(t)}{t} \right\} = \int_s^\infty F(\sigma) \, d\sigma
+$$
+
+**注意：**
+
+这个性质在实际应用中不如微分性质常用，但在某些积分变换和信号处理问题中会有所涉及。
+
+---
+
+### 三、总结
+
+- **频域微分性质：**
+
+  在时域中乘以  $ t^n $  相当于在频域中对  $ F(s) $  关于  $ s $  求  $ n $  阶导数并乘以  $ (-1)^n $ ：
+
+  $$
+  \mathcal{L}\{ t^n f(t) \} = (-1)^n \frac{d^n F(s)}{ds^n}
+  $$
+
+- **频域积分性质：**
+
+  在时域中将  $ f(t) $  除以  $ t $ ，相当于在频域中对  $ F(s) $  从  $ s $  到无穷大积分：
+
+  $$
+  \mathcal{L}\left\{ \frac{f(t)}{t} \right\} = \int_s^\infty F(\sigma) \, d\sigma
+  $$
+
+
 
 ### 1. 初值定理（Initial Value Theorem）
 
