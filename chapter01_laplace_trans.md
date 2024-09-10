@@ -558,13 +558,13 @@ $$
 因此：
 
 $$
-\int_s^\infty F(\sigma) \, d\sigma = \int_0^\infty f(t) \cdot \frac{e^{-s t}}{t} \, dt = \mathcal{L}\left\{ \frac{f(t)}{t} \right\}
+\int_s^\infty F(\sigma) \, d\sigma = \int_0^\infty f(t) \cdot \frac{e^{-s t}}{t} \, dt = \mathcal{L}\left( \frac{f(t)}{t} \right)
 $$
 
 **结论：**
 
 $$
-\mathcal{L}\left\{ \frac{f(t)}{t} \right\} = \int_s^\infty F(\sigma) \, d\sigma
+\mathcal{L}\left( \frac{f(t)}{t} \right) = \int_s^\infty F(\sigma) \, d\sigma
 $$
 
 **注意：**
@@ -783,7 +783,7 @@ $$
 对这个表达式进行拉普拉斯变换：
 
 $$
-\mathcal{L}\{(f * g)(t)\} = \mathcal{L}\left\{\int_0^t f(\tau) g(t - \tau) \, d\tau \right\}
+\mathcal{L}\{(f * g)(t)\} = \mathcal{L}\left( \int_0^t f(\tau) g(t - \tau) \, d\tau \right)
 $$
 
 通过改变积分变量，得到：
