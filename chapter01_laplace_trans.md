@@ -709,7 +709,7 @@ $$
 \lim_{t \to \infty} f(t) = \lim_{s \to 0} s \cdot \frac{1}{s + 2} = \lim_{s \to 0} \frac{s}{s + 2} = 0
 $$
 
-因此，$f(\infty) = 0$。
+因此， $f(\infty) = 0$ 。
 
 ---
 
