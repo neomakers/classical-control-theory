@@ -606,19 +606,19 @@ $$
 
 - **频域微分性质：**
 
-  在时域中乘以  $ t^n $  相当于在频域中对  $ F(s) $  关于  $ s $  求  $ n $  阶导数并乘以  $ (-1)^n $ ：
+  在时域中乘以  $t^n$  相当于在频域中对  $F(s)$  关于  $s$  求  $n$  阶导数并乘以  $(-1)^n$ ：
 
-  $$
-  \mathcal{L}\{ t^n f(t) \} = (-1)^n \frac{d^n F(s)}{ds^n}
-  $$
+$$
+\mathcal{L}\{ t^n f(t) \} = (-1)^n \frac{d^n F(s)}{ds^n}
+$$
 
 - **频域积分性质：**
 
-  在时域中将  $ f(t) $  除以  $ t $ ，相当于在频域中对  $ F(s) $  从  $ s $  到无穷大积分：
+  在时域中将  $f(t)$  除以  $t$ ，相当于在频域中对  $F(s)$  从  $s$  到无穷大积分：
 
-  $$
-  \mathcal{L}\left\{ \frac{f(t)}{t} \right\} = \int_s^\infty F(\sigma) \, d\sigma
-  $$
+$$
+\mathcal{L}\left\{ \frac{f(t)}{t} \right\} = \int_s^\infty F(\sigma) \, d\sigma
+$$
 
 
 
@@ -630,7 +630,7 @@ $$
 \lim_{t \to 0^+} f(t) = \lim_{s \to \infty} s F(s)
 $$
 
-其中，$F(s)$ 是 $f(t)$ 的拉普拉斯变换。
+其中， $F(s)$ 是 $f(t)$ 的拉普拉斯变换。
 
 #### 初值定理的推导
 
@@ -664,7 +664,7 @@ $$
 \lim_{t \to 0^+} f(t) = \lim_{s \to \infty} s \cdot \frac{1}{s + 2} = \lim_{s \to \infty} \frac{s}{s + 2} = 1
 $$
 
-因此，$f(0^+) = 1$。
+因此， $f(0^+) = 1$。
 
 ---
 
@@ -676,7 +676,7 @@ $$
 \lim_{t \to \infty} f(t) = \lim_{s \to 0} s F(s)
 $$
 
-其中，$F(s)$ 是 $f(t)$ 的拉普拉斯变换。
+其中， $F(s)$ 是 $f(t)$ 的拉普拉斯变换。
 
 #### 终值定理的推导
 
