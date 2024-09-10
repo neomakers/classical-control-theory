@@ -6,7 +6,7 @@ $$
 \mathcal{L}\{f(t)\} = F(s) = \int_{0}^{\infty} e^{-st} f(t) \, dt
 $$
 
-其中，$f(t)$ 是时间域的函数，$F(s)$ 是频率域的函数，$s$ 为复数变量。
+其中， $f(t)$ 是时间域的函数， $F(s)$ 是频率域的函数， $s$ 为复数变量。
 
 ### Python代码实现
 
@@ -34,11 +34,13 @@ $$
 ### 拉普拉斯变换的性质
 
 1. **线性性质**：
+
    $$
    \mathcal{L}\{af(t) + bg(t)\} = aF(s) + bG(s)
    $$
 
 2. **时间移位性质**：
+   
    $$
    \mathcal{L}\{f(t - a)u(t - a)\} = e^{-as}F(s)
    $$
@@ -51,9 +53,11 @@ $$
 
 我们仍然从拉普拉斯变换的定义开始：
 
+
 $$
 \mathcal{L}\{f(t)\} = \int_{0}^{\infty} e^{-st} f(t) \, dt
 $$
+
 
 对于时移的函数 $f(t - a)$，其拉普拉斯变换为：
 
@@ -197,8 +201,9 @@ $$
 
 拉普拉斯变换的**积分特性**描述了一个函数的积分与其拉普拉斯变换之间的关系。它的基本公式为：
 
+
 $$
-\mathcal{L}\left\{\int_0^t f(\tau) \, d\tau \right\} = \frac{F(s)}{s}
+\mathcal{L}\left \{ \int_0^t f(\tau) \, d\tau \right\} = \frac{F(s)}{s}
 $$
 
 其中，$F(s)$ 是 $f(t)$ 的拉普拉斯变换。
@@ -220,7 +225,7 @@ $$
 我们知道 $g(t) = \int_0^t f(\tau) \, d\tau$，因此将其代入：
 
 $$
-\mathcal{L}\left\{\int_0^t f(\tau) \, d\tau \right\} = \int_0^{\infty} e^{-st} \left( \int_0^t f(\tau) \, d\tau \right) dt
+\mathcal{L} \left \{ \int_0^t f(\tau) \, d\tau \right\} = \int_0^{\infty} e^{-st} \left( \int_0^t f(\tau) \, d\tau \right) dt
 $$
 
 接下来，交换积分的顺序。这是一种常用的技巧，可以将 $t$ 的积分移到外层，并对 $\tau$ 积分：
