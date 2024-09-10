@@ -619,7 +619,7 @@ $$
   在时域中将  $f(t)$  除以  $t$ ，相当于在频域中对  $F(s)$  从  $s$  到无穷大积分：
 
 $$
-\mathcal{L}\left\{ \frac{f(t)}{t} \right\} = \int_{s}^\infty \frac{F(\sigma)}{\sigma} \, d\sigma
+\mathcal{L}\left( \frac{f(t)}{t} \right) = \int_{s}^\infty \frac{F(\sigma)}{\sigma} \, d\sigma
 $$
 
 
