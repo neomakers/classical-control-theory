@@ -225,14 +225,17 @@ $$
 我们知道 $g(t) = \int_0^t f(\tau) \, d\tau$，因此将其代入：
 
 $$
-\mathcal{L} \left \{ \int_0^t f(\tau) \, d\tau \right\} = \int_0^{\infty} e^{-st} \left( \int_0^t f(\tau) \, d\tau \right) dt
+\mathcal{L} \{ \int_0^t f(\tau) \, d\tau \} = \int_0^{\infty} e^{-st} \left( \int_0^t f(\tau) \, d\tau \right) dt
 $$
+
+
 
 接下来，交换积分的顺序。这是一种常用的技巧，可以将 $t$ 的积分移到外层，并对 $\tau$ 积分：
 
 $$
-= \int_0^{\infty} f(\tau) \left( \int_{\tau}^{\infty} e^{-st} \, dt \right) d\tau
+= \int_0^{\infty} f(\tau) ( \int_{\tau}^{\infty} e^{-st} \, dt ) d\tau
 $$
+
 
 现在，我们计算内层的积分：
 
@@ -243,8 +246,9 @@ $$
 将结果代入公式中，得到：
 
 $$
-\mathcal{L}\left\{\int_0^t f(\tau) \, d\tau \right\} = \int_0^{\infty} f(\tau) \cdot \frac{e^{-s\tau}}{s} \, d\tau
+\mathcal{L}\{\int_0^t f(\tau) \, d\tau \} = \int_0^{\infty} f(\tau) \frac{e^{-s\tau}}{s} \, d\tau
 $$
+
 
 这相当于 $f(t)$ 的拉普拉斯变换乘以 $\frac{1}{s}$：
 
@@ -254,17 +258,18 @@ $$
 
 因此，最终结果为：
 
-$$
-\mathcal{L}\left\{\int_0^t f(\tau) \, d\tau \right\} = \frac{F(s)}{s}
-$$
+
+$$ \mathcal{L}\{\int_0^t f(\tau) \, d\tau \} = \frac{F(s)}{s} $$
+
 
 ### 结论
 
 拉普拉斯变换的积分特性表明：
 
 $$
-\mathcal{L}\left\{\int_0^t f(\tau) \, d\tau \right\} = \frac{F(s)}{s}
+\mathcal{L}\{\int_0^t f(\tau) \, d\tau \} = \frac{F(s)}{s}
 $$
+
 
 这意味着，对于一个函数 $f(t)$，它的积分在拉普拉斯域中相当于其拉普拉斯变换除以 $s$。这个特性在求解积分方程和控制系统中非常有用，特别是在描述系统的累积效应时。
 
