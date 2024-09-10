@@ -8,6 +8,31 @@ $$
 
 其中， $f(t)$ 是时间域的函数， $F(s)$ 是频率域的函数， $s$ 为复数变量。
 
+定义式法
+```python
+import sympy as sp
+
+# 定义变量
+a, t, s = sp.symbols('a t s')
+
+# 定义 f(t) = sin(at)
+f_t = sp.sin(a*t)
+
+# 定义拉普拉斯变换的表达式，并简化结果
+laplace_integral = sp.integrate(sp.exp(-s*t) * f_t, (t, 0, sp.oo))
+
+# 简化结果
+simplified_result = sp.simplify(laplace_integral)
+
+# 输出推导结果
+simplified_result
+```
+
+$$
+
+\displaystyle \begin{cases} \frac{a}{a^{2} + s^{2}} & \text{for}\: \left\|{\arg{\left(a \right)}}\right\| = 0 \wedge \left\|{\arg{\left(s \right)}}\right\| < \frac{\pi}{2} \\\int\limits_{0}^{\infty} e^{- s t} \sin{\left(a t \right)}\, dt & \text{otherwise} \end{cases}
+$$
+
 ### Python代码实现
 
 我们可以使用SciPy中的 `scipy.integrate.quad` 来进行数值积分，或直接使用 `sympy` 来实现符号计算。
