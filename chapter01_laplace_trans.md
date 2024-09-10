@@ -203,8 +203,9 @@ $$
 
 
 $$
-\mathcal{L}\left \{ \int_0^t f(\tau) \, d\tau \right\} = \frac{F(s)}{s}
+\mathcal{L}\{\int_0^t f(\tau) \, d\tau \} = \frac{F(s)}{s}
 $$
+
 
 其中，$F(s)$ 是 $f(t)$ 的拉普拉斯变换。
 
