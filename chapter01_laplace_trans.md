@@ -522,7 +522,7 @@ $$
 所以：
 
 $$
-- \frac{dF(s)}{ds} = \int_0^\infty t e^{-st} f(t) \, dt = \mathcal{L}\{ t f(t) \}
+\frac{dF(s)}{ds} = \int_0^\infty t e^{-st} f(t) \, dt = \mathcal{L}\{ t f(t) \}
 $$
 
 **结论：**
