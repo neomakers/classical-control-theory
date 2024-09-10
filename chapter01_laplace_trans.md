@@ -36,15 +36,18 @@ $$
 1. **线性性质**：
 
    $$
+   
    \mathcal{L}\{af(t) + bg(t)\} = aF(s) + bG(s)
+   
    $$
 
 2. **时间移位性质**：
    
    $$
+  
    \mathcal{L}\{f(t - a)u(t - a)\} = e^{-as}F(s)
+   
    $$
-
 
 
 如果不使用单位阶跃函数 $u(t - a)$，我们依然可以推导拉普拉斯变换的时移性质，但前提是 $f(t - a)$ 在 $t = a$ 之前为零，这种情况下默认 $f(t - a)$ 是在 $t \geq a$ 时有效。
@@ -519,15 +522,16 @@ $$
 
 **性质：**
 
-若  $ F(s) = \mathcal{L}\{ f(t) \} $ ，则：
+若  $F(s) = \mathcal{L}\{ f(t) \}$ ，则：
 
 $$
-\mathcal{L}\left\{ \frac{f(t)}{t} \right\} = \int_s^\infty F(\sigma) \, d\sigma
+\mathcal{L}\left( \frac{f(t)}{t} \right) = \int_s^\infty F(\sigma) \, d\sigma
 $$
+
 
 **解释：**
 
-在时域中将函数  $ f(t) $  除以  $ t $ ，相当于在频域中对  $ F(s) $  从  $ s $  积分到无穷大。
+在时域中将函数  $f(t)$  除以  $t$ ，相当于在频域中对  $F(s)$  从  $s$  积分到无穷大。
 
 **推导过程：**
 
