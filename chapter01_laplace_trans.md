@@ -29,9 +29,13 @@ simplified_result
 ```
 
 $$
-
-\displaystyle \begin{cases} \frac{a}{a^{2} + s^{2}} & \text{for}\: \left\|{\arg{\left(a \right)}}\right\| = 0 \wedge \left\|{\arg{\left(s \right)}}\right\| < \frac{\pi}{2} \\\int\limits_{0}^{\infty} e^{- s t} \sin{\left(a t \right)}\, dt & \text{otherwise} \end{cases}
+f(a, s) = 
+\begin{cases} 
+\frac{a}{a^2 + s^2} & \text{if } \left\| \arg(a) \right\| = 0 \text{ and } \left\| \arg(s) \right\| < \frac{\pi}{2} \\
+\int_{0}^{\infty} e^{-st} \sin(at) \, dt & \text{otherwise}
+\end{cases}
 $$
+
 
 ### Python代码实现
 
