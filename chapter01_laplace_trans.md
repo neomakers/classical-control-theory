@@ -716,15 +716,15 @@ $$
 
 - **初值定理**：
 
-  $$
-  \lim_{t \to 0^+} f(t) = \lim_{s \to \infty} s F(s)
-  $$
+$$
+\lim_{t \to 0^+} f(t) = \lim_{s \to \infty} s F(s)
+$$
 
 - **终值定理**：
 
-  $$
-  \lim_{t \to \infty} f(t) = \lim_{s \to 0} s F(s)
-  $$
+$$
+\lim_{t \to \infty} f(t) = \lim_{s \to 0} s F(s)
+$$
 
 使用这两条定理，可以通过频域中的信息快速得到系统的初始和最终行为，而无需返回到时域进行复杂的计算。这在处理复杂系统时非常有用。
 
