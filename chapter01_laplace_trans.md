@@ -3,7 +3,7 @@
 拉普拉斯变换将时间域的信号转换为频率域，通常定义为：
 
 $$
-\mathcal{L} [\{f(t)\} ]= F(s) = \int_{0}^{\infty} e^{-st} f(t) \, dt
+\mathcal{L} [[\{f(t)\}] ]= F(s) = \int_{0}^{\infty} e^{-st} f(t) \, dt
 $$
 
 其中， $f(t)$ 是时间域的函数， $F(s)$ 是频率域的函数， $s$ 为复数变量。
@@ -57,7 +57,7 @@ F_s
 该代码计算了函数 $f(t) = e^{-t}$ 的拉普拉斯变换，结果为：
 
 $$
-\mathcal{L}\{e^{-t}\} = \frac{1}{s+1}
+\mathcal{L}[\{e^{-t}\}] = \frac{1}{s+1}
 $$
 
 ### 拉普拉斯变换的性质
@@ -65,13 +65,13 @@ $$
 1. **线性性质**：
 
 $$
-\mathcal{L}[\{af(t) + bg(t)\}] = aF(s) + bG(s) 
+\mathcal{L}[[\{af(t) + bg(t)\}]] = aF(s) + bG(s) 
 $$
 
 2. **时间移位性质**：
    
 $$
-\mathcal{L}\{f(t - a)u(t - a)\} = e^{-as}F(s)
+\mathcal{L}[\{f(t - a)u(t - a)\}] = e^{-as}F(s)
 $$
 
 
@@ -83,38 +83,38 @@ $$
 
 
 $$
-\mathcal{L}[\{f(t)\}] = \int_{0}^{\infty} e^{-st} f(t) \, dt
+\mathcal{L}[[\{f(t)\}]] = \int_{0}^{\infty} e^{-st} f(t) \, dt
 $$
 
 
 对于时移的函数 $f(t - a)$，其拉普拉斯变换为：
 
 $$
-\mathcal{L}\{f(t - a)\} = \int_{0}^{\infty} e^{-st} f(t - a) \, dt
+\mathcal{L}[[\{f(t - a)\}] = \int_{0}^{\infty} e^{-st} f(t - a) \, dt
 $$
 
 由于 $f(t - a)$ 在 $t < a$ 时为零，因此积分的下限可以改为 $a$，从而表达为：
 
 $$
-\mathcal{L}\{f(t - a)\} = \int_{a}^{\infty} e^{-st} f(t - a) \, dt
+\mathcal{L}[\{f(t - a)\}] = \int_{a}^{\infty} e^{-st} f(t - a) \, dt
 $$
 
 接下来，我们进行变量替换。令 $\tau = t - a$，因此 $t = \tau + a$ 并且 $dt = d\tau$。积分上下限也相应变为 $\tau = 0$ 到 $\tau = \infty$，则公式变为：
 
 $$
-\mathcal{L}\{f(t - a)\} = \int_{0}^{\infty} e^{-s(\tau + a)} f(\tau) \, d\tau
+\mathcal{L}[\{f(t - a)\}] = \int_{0}^{\infty} e^{-s(\tau + a)} f(\tau) \, d\tau
 $$
 
 接下来我们将指数项分解为 $e^{-s(\tau + a)} = e^{-s\tau} \cdot e^{-as}$，并将常数 $e^{-as}$ 移出积分号：
 
 $$
-\mathcal{L}\{f(t - a)\} = e^{-as} \int_{0}^{\infty} e^{-s\tau} f(\tau) \, d\tau
+\mathcal{L}[\{f(t - a)\}] = e^{-as} \int_{0}^{\infty} e^{-s\tau} f(\tau) \, d\tau
 $$
 
 此时，积分部分就是 $f(t)$ 的拉普拉斯变换 $F(s)$，因此我们可以得到最终的结果：
 
 $$
-\mathcal{L}\{f(t - a)\} = e^{-as} F(s)
+\mathcal{L}[\{f(t - a)\}] = e^{-as} F(s)
 $$
 
 ### 结论
@@ -122,7 +122,7 @@ $$
 即便不使用单位阶跃函数 $u(t - a)$，拉普拉斯变换的时移性质依然成立，结果仍然为：
 
 $$
-\mathcal{L}\{f(t - a)\} = e^{-as}F(s)
+\mathcal{L}[\{f(t - a)\}] = e^{-as}F(s)
 $$
 
 这个公式表明当 $f(t)$ 向右移动 $a$ 个时间单位时，其拉普拉斯变换会在频域中乘以 $e^{-as}$。
@@ -136,37 +136,37 @@ $$
 我们仍然从拉普拉斯变换的定义开始：
 
 $$
-\mathcal{L}\{f(t)\} = \int_{0}^{\infty} e^{-st} f(t) \, dt
+\mathcal{L}[\{f(t)\}] = \int_{0}^{\infty} e^{-st} f(t) \, dt
 $$
 
 对于时移的函数 $f(t - a)$，其拉普拉斯变换为：
 
 $$
-\mathcal{L}\{f(t - a)\} = \int_{0}^{\infty} e^{-st} f(t - a) \, dt
+\mathcal{L}[\{f(t - a)\}] = \int_{0}^{\infty} e^{-st} f(t - a) \, dt
 $$
 
 由于 $f(t - a)$ 在 $t < a$ 时为零，因此积分的下限可以改为 $a$，从而表达为：
 
 $$
-\mathcal{L}\{f(t - a)\} = \int_{a}^{\infty} e^{-st} f(t - a) \, dt
+\mathcal{L}[\{f(t - a)\}] = \int_{a}^{\infty} e^{-st} f(t - a) \, dt
 $$
 
 接下来，我们进行变量替换。令 $\tau = t - a$，因此 $t = \tau + a$ 并且 $dt = d\tau$。积分上下限也相应变为 $\tau = 0$ 到 $\tau = \infty$，则公式变为：
 
 $$
-\mathcal{L}\{f(t - a)\} = \int_{0}^{\infty} e^{-s(\tau + a)} f(\tau) \, d\tau
+\mathcal{L}[\{f(t - a)\}] = \int_{0}^{\infty} e^{-s(\tau + a)} f(\tau) \, d\tau
 $$
 
 接下来我们将指数项分解为 $e^{-s(\tau + a)} = e^{-s\tau} \cdot e^{-as}$，并将常数 $e^{-as}$ 移出积分号：
 
 $$
-\mathcal{L}\{f(t - a)\} = e^{-as} \int_{0}^{\infty} e^{-s\tau} f(\tau) \, d\tau
+\mathcal{L}[\{f(t - a)\}] = e^{-as} \int_{0}^{\infty} e^{-s\tau} f(\tau) \, d\tau
 $$
 
 此时，积分部分就是 $f(t)$ 的拉普拉斯变换 $F(s)$，因此我们可以得到最终的结果：
 
 $$
-\mathcal{L}\{f(t - a)\} = e^{-as} F(s)
+\mathcal{L}[\{f(t - a)\}] = e^{-as} F(s)
 $$
 
 ### 结论
@@ -174,7 +174,7 @@ $$
 即便不使用单位阶跃函数 $u(t - a)$，拉普拉斯变换的时移性质依然成立，结果仍然为：
 
 $$
-\mathcal{L}\{f(t - a)\} = e^{-as}F(s)
+\mathcal{L}[\{f(t - a)\}] = e^{-as}F(s)
 $$
 
 这个公式表明当 $f(t)$ 向右移动 $a$ 个时间单位时，其拉普拉斯变换会在频域中乘以 $e^{-as}$。
@@ -184,7 +184,7 @@ $$
 拉普拉斯变换的**频移性质**描述了当函数与一个指数函数 $e^{at}$ 相乘时，其拉普拉斯变换如何变化。频移性质的公式为：
 
 $$
-\mathcal{L}\{e^{at} f(t)\} = F(s - a)
+\mathcal{L}[\{e^{at} f(t)\}] = F(s - a)
 $$
 
 其中， $F(s)$ 是 $f(t)$ 的拉普拉斯变换。这个性质表明，函数乘以 $e^{at}$ 后，其拉普拉斯变换相当于将 $F(s)$ 中的 $s$ 替换为 $s - a$。
@@ -194,25 +194,25 @@ $$
 从拉普拉斯变换的定义出发：
 
 $$
-\mathcal{L}\{f(t)\} = \int_{0}^{\infty} e^{-st} f(t) \, dt
+\mathcal{L}[\{f(t)\}] = \int_{0}^{\infty} e^{-st} f(t) \, dt
 $$
 
 现在，我们考虑 $e^{at} f(t)$ 的拉普拉斯变换：
 
 $$
-\mathcal{L}\{e^{at} f(t)\} = \int_{0}^{\infty} e^{-st} e^{at} f(t) \, dt
+\mathcal{L}[\{e^{at} f(t)\}] = \int_{0}^{\infty} e^{-st} e^{at} f(t) \, dt
 $$
 
 我们将 $e^{-st}$ 和 $e^{at}$ 合并：
 
 $$
-\mathcal{L}\{e^{at} f(t)\} = \int_{0}^{\infty} e^{-(s - a)t} f(t) \, dt
+\mathcal{L}[\{e^{at} f(t)\}] = \int_{0}^{\infty} e^{-(s - a)t} f(t) \, dt
 $$
 
 这个积分与 $f(t)$ 的拉普拉斯变换非常相似，只是 $s$ 被替换成了 $s - a$。因此，结果就是 $f(t)$ 的拉普拉斯变换，但 $s$ 被替换为 $s - a$：
 
 $$
-\mathcal{L}\{e^{at} f(t)\} = F(s - a)
+\mathcal{L}[\{e^{at} f(t)\}] = F(s - a)
 $$
 
 ### 结论
@@ -220,7 +220,7 @@ $$
 拉普拉斯变换的频移性质表明：
 
 $$
-\mathcal{L}\{e^{at} f(t)\} = F(s - a)
+\mathcal{L}[\{e^{at} f(t)\}] = F(s - a)
 $$
 
 当 $f(t)$ 与一个指数函数 $e^{at}$ 相乘时，其拉普拉斯变换相当于原来的拉普拉斯变换 $F(s)$ 中的 $s$ 替换为 $s - a$。这一性质在处理带有增长或衰减的系统时非常有用，例如在分析具有指数增长或衰减的系统时。
@@ -231,7 +231,7 @@ $$
 
 
 $$
-\mathcal{L}\{\int_0^t f(\tau) \, d\tau \} = \frac{F(s)}{s}
+\mathcal{L}[\{\int_0^t f(\tau) \, d\tau \}] = \frac{F(s)}{s}
 $$
 
 
@@ -248,13 +248,13 @@ $$
 现在，我们对这个函数 $g(t)$ 进行拉普拉斯变换，利用拉普拉斯变换的定义：
 
 $$
-\mathcal{L}\{g(t)\} = \int_0^{\infty} e^{-st} g(t) \, dt
+\mathcal{L}[\{g(t)\}] = \int_0^{\infty} e^{-st} g(t) \, dt
 $$
 
 我们知道 $g(t) = \int_0^t f(\tau) \, d\tau$，因此将其代入：
 
 $$
-\mathcal{L} \{ \int_0^t f(\tau) \, d\tau \} = \int_0^{\infty} e^{-st} \left( \int_0^t f(\tau) \, d\tau \right) dt
+\mathcal{L} [\{ \int_0^t f(\tau) \, d\tau \}] = \int_0^{\infty} e^{-st} \left( \int_0^t f(\tau) \, d\tau \right) dt
 $$
 
 
@@ -275,7 +275,7 @@ $$
 将结果代入公式中，得到：
 
 $$
-\mathcal{L}\{\int_0^t f(\tau) \, d\tau \} = \int_0^{\infty} f(\tau) \frac{e^{-s\tau}}{s} \, d\tau
+\mathcal{L}[\{\int_0^t f(\tau) \, d\tau \}] = \int_0^{\infty} f(\tau) \frac{e^{-s\tau}}{s} \, d\tau
 $$
 
 
@@ -288,7 +288,7 @@ $$
 因此，最终结果为：
 
 
-$$ \mathcal{L}\{\int_0^t f(\tau) \, d\tau \} = \frac{F(s)}{s} $$
+$$ \mathcal{L}[\{\int_0^t f(\tau) \, d\tau \}] = \frac{F(s)}{s} $$
 
 
 ### 结论
@@ -296,7 +296,7 @@ $$ \mathcal{L}\{\int_0^t f(\tau) \, d\tau \} = \frac{F(s)}{s} $$
 拉普拉斯变换的积分特性表明：
 
 $$
-\mathcal{L}\{\int_0^t f(\tau) \, d\tau \} = \frac{F(s)}{s}
+\mathcal{L}[\{\int_0^t f(\tau) \, d\tau \}] = \frac{F(s)}{s}
 $$
 
 
@@ -309,7 +309,7 @@ $$
 拉普拉斯变换的**微分性质**描述了一个函数的导数与其拉普拉斯变换之间的关系。它的公式为：
 
 $$
-\mathcal{L}\{f'(t)\} = sF(s) - f(0)
+\mathcal{L}[\{f'(t)\}] = sF(s) - f(0)
 $$
 
 其中， $F(s)$ 是 $f(t)$ 的拉普拉斯变换， $f'(t)$ 是 $f(t)$ 的导数，且 $f(0)$ 是 $f(t)$ 在 $t = 0$ 时的初始值。
@@ -319,13 +319,13 @@ $$
 从拉普拉斯变换的定义开始：
 
 $$
-\mathcal{L}\{f(t)\} = \int_0^{\infty} e^{-st} f(t) \, dt
+\mathcal{L}[\{f(t)\}] = \int_0^{\infty} e^{-st} f(t) \, dt
 $$
 
 现在，我们对 $f'(t)$ 进行拉普拉斯变换，利用定义：
 
 $$
-\mathcal{L}\{f'(t)\} = \int_0^{\infty} e^{-st} f'(t) \, dt
+\mathcal{L}[\{f'(t)\}] = \int_0^{\infty} e^{-st} f'(t) \, dt
 $$
 
 我们可以对这个积分应用**分部积分**公式。设 $u = e^{-st}$ 和 $dv = f'(t) \, dt$，因此：
@@ -342,7 +342,7 @@ $$
 代入这些变量，得到：
 
 $$
-\mathcal{L}\{f'(t)\} = e^{-st} f(t) \bigg|_0^{\infty} - \int_0^{\infty} f(t) \cdot (-s e^{-st}) \, dt
+\mathcal{L}[\{f'(t)\}] = e^{-st} f(t) \bigg|_0^{\infty} - \int_0^{\infty} f(t) \cdot (-s e^{-st}) \, dt
 $$
 
 第一项 $e^{-st} f(t) \bigg|_0^{\infty}$ 在 $t \to \infty$ 时为 0（假设 $f(t)$ 不发散），因此这项为：
@@ -360,7 +360,7 @@ $$
 因此，拉普拉斯变换的微分公式可以写为：
 
 $$
-\mathcal{L}\{f'(t)\} = sF(s) - f(0)
+\mathcal{L}[\{f'(t)\}] = sF(s) - f(0)
 $$
 
 ### 微分性质的解释
@@ -372,7 +372,7 @@ $$
 如果是高阶导数 $f^{(n)}(t)$，拉普拉斯变换的性质为：
 
 $$
-\mathcal{L}\{f^{(n)}(t)\} = s^n F(s) - s^{n-1} f(0) - s^{n-2} f'(0) - \dots - f^{(n-1)}(0)
+\mathcal{L}[\{f^{(n)}(t)\}] = s^n F(s) - s^{n-1} f(0) - s^{n-2} f'(0) - \dots - f^{(n-1)}(0)
 $$
 
 这个公式描述了高阶导数的拉普拉斯变换，其中每个初始条件 $f(0), f'(0), \dots$ 都会以 $s$ 的不同次幂乘上相应的初始值。
@@ -382,7 +382,7 @@ $$
 拉普拉斯变换的微分性质为：
 
 $$
-\mathcal{L}\{f'(t)\} = sF(s) - f(0)
+\mathcal{L}[\{f'(t)\}] = sF(s) - f(0)
 $$
 
 这表明导数的拉普拉斯变换与原函数的拉普拉斯变换之间存在简单的关系，尤其在分析控制系统的微分方程时非常有用。
@@ -393,7 +393,7 @@ $$
 从基本的微分性质出发：
 
 $$
-\mathcal{L}\{f'(t)\} = sF(s) - f(0)
+\mathcal{L}[\{f'(t)\}] = sF(s) - f(0)
 $$
 
 这表明函数的**一阶导数**的拉普拉斯变换，等于原函数 $f(t)$ 的拉普拉斯变换 $F(s)$ 乘以 $s$，再减去函数在 $t=0$ 处的初始值 $f(0)$。
@@ -403,29 +403,29 @@ $$
 现在我们来看**二阶导数**的拉普拉斯变换：
 
 $$
-\mathcal{L}\{f''(t)\} = s \mathcal{L}\{f'(t)\} - f'(0)
+\mathcal{L}[\{f''(t)\}] = s \mathcal{L}[\{f'(t)\}] - f'(0)
 $$
 
-根据一阶导数的性质 $\mathcal{L}\{f'(t)\} = sF(s) - f(0)$，我们可以带入：
+根据一阶导数的性质 $\mathcal{L}[\{f'(t)\}] = sF(s) - f(0)$，我们可以带入：
 
 $$
-\mathcal{L}\{f''(t)\} = s(sF(s) - f(0)) - f'(0)
+\mathcal{L}[\{f''(t)\}] = s(sF(s) - f(0)) - f'(0)
 $$
 
 展开后得到：
 
 $$
-\mathcal{L}\{f''(t)\} = s^2F(s) - sf(0) - f'(0)
+\mathcal{L}[\{f''(t)\}] = s^2F(s) - sf(0) - f'(0)
 $$
 
 这个结果表明，函数 $f(t)$ 的二阶导数的拉普拉斯变换中，出现了 $s^2F(s)$ 和初始条件 $f(0)$ 与 $f'(0)$，分别乘以 $s$ 的不同次幂。
 
 ### 高阶导数的拉普拉斯变换
 
-推广到**高阶导数**，假设我们要求 $f(t)$ 的**第 $n$ 阶导数**的拉普拉斯变换 $\mathcal{L}\{f^{(n)}(t)\}$。这个公式描述为：
+推广到**高阶导数**，假设我们要求 $f(t)$ 的**第 $n$ 阶导数**的拉普拉斯变换 $\mathcal{L}[\{f^{(n)}(t)\}]$。这个公式描述为：
 
 $$
-\mathcal{L}\{f^{(n)}(t)\} = s^n F(s) - s^{n-1} f(0) - s^{n-2} f'(0) - \dots - f^{(n-1)}(0)
+\mathcal{L}[\{f^{(n)}(t)\}] = s^n F(s) - s^{n-1} f(0) - s^{n-2} f'(0) - \dots - f^{(n-1)}(0)
 $$
 
 这里，我们逐项解释每一部分：
@@ -440,7 +440,7 @@ $$
 
 ### 公式总结
 
-公式  $\mathcal{L}\{f^{(n)}(t)\}$ 将高阶导数的拉普拉斯变换分解为两部分：
+公式  $\mathcal{L}[\{f^{(n)}(t)\}]$ 将高阶导数的拉普拉斯变换分解为两部分：
 
 1. **主项**： $s^n F(s)$ ，这部分体现了频率域中高阶导数的影响。
 2. **初始条件项**：每个初始条件 $f(0), f'(0), \dots, f^{(n-1)}(0)$ 分别乘以 $s$ 的不同次幂，反映了初始条件对系统动态的影响。
@@ -452,7 +452,7 @@ $$
 假设我们求 $f^{(3)}(t)$ 的拉普拉斯变换：
 
 $$
-\mathcal{L}\{f^{(3)}(t)\} = s^3 F(s) - s^2 f(0) - s f'(0) - f''(0)
+\mathcal{L}[\{f^{(3)}(t)\}] = s^3 F(s) - s^2 f(0) - s f'(0) - f''(0)
 $$
 
 这里每个初始条件 $f(0), f'(0), f''(0)$ 都会影响到三阶导数的拉普拉斯变换。这个公式在求解高阶微分方程时特别有用，因为它允许我们将初始条件直接引入方程中。
@@ -477,10 +477,10 @@ $$
 
 **性质：**
 
-若  $F(s) = \mathcal{L}\{ f(t) \}$ ，则：
+若  $F(s) = \mathcal{L}[\{ f(t) \}]$ ，则：
 
 $$
-\mathcal{L}\{ t f(t) \} = -\frac{dF(s)}{ds}
+\mathcal{L}[\{ t f(t) \}] = -\frac{dF(s)}{ds}
 $$
 
 **解释：**
@@ -522,14 +522,14 @@ $$
 所以：
 
 $$
-\frac{dF(s)}{ds} = \int_0^\infty t e^{-st} f(t) \, dt = \mathcal{L}\{ t f(t) \}
+\frac{dF(s)}{ds} = \int_0^\infty t e^{-st} f(t) \, dt = \mathcal{L}[\{ t f(t) \}]
 $$
 
 **结论：**
 
 
 $$
-\mathcal{L}\{ t f(t) \} = -\frac{dF(s)}{ds}
+\mathcal{L}[\{ t f(t) \}] = -\frac{dF(s)}{ds}
 $$
 
 
@@ -540,7 +540,7 @@ $$
 对于任意正整数  $n$ ：
 
 $$
-\mathcal{L}\{ t^n f(t) \} = (-1)^n \frac{d^n F(s)}{ds^n}
+\mathcal{L}[\{ t^n f(t) \}] = (-1)^n \frac{d^n F(s)}{ds^n}
 $$
 
 ---
@@ -549,7 +549,7 @@ $$
 
 **性质：**
 
-若  $F(s) = \mathcal{L}\{ f(t) \}$ ，则：
+若  $F(s) = \mathcal{L}[\{ f(t) \}]$ ，则：
 
 $$
 \mathcal{L}\left( \frac{f(t)}{t} \right) = \int_s^\infty F(\sigma) \, d\sigma
@@ -565,7 +565,7 @@ $$
 从拉普拉斯变换的基本性质出发，我们知道：
 
 $$
-\mathcal{L}\{ f(t) \} = F(s)
+\mathcal{L}[\{ f(t) \}] = F(s)
 $$
 
 考虑到频域内的积分，我们引入以下关系：
@@ -611,7 +611,7 @@ $$
   在时域中乘以  $t^n$  相当于在频域中对  $F(s)$  关于  $s$  求  $n$  阶导数并乘以  $(-1)^n$ ：
 
 $$
-\mathcal{L}\{ t^n f(t) \} = (-1)^n \frac{d^n F(s)}{ds^n}
+\mathcal{L}[\{ t^n f(t) \}] = (-1)^n \frac{d^n F(s)}{ds^n}
 $$
 
 - **频域积分性质：**
@@ -640,7 +640,7 @@ $$
 我们从拉普拉斯变换的定义开始：
 
 $$
-F(s) = \mathcal{L}\{f(t)\} = \int_0^{\infty} e^{-st} f(t) \, dt
+F(s) = \mathcal{L}[\{f(t)\}] = \int_0^{\infty} e^{-st} f(t) \, dt
 $$
 
 为了求初值 $f(0^+)$，我们可以通过解析 $F(s)$ 在 $s \to \infty$ 时的行为来得到函数 $f(t)$ 在 $t \to 0^+$ 时的值。
@@ -796,10 +796,10 @@ $$
 
 **性质：**
 
-若 $F(s) = \mathcal{L}\{f(t)\}$ 和 $G(s) = \mathcal{L}\{g(t)\}$，则：
+若 $F(s) = \mathcal{L}[\{f(t)\}]$ 和 $G(s) = \mathcal{L}[\{g(t)\}]$，则：
 
 $$
-\mathcal{L}\{f(t) * g(t)\} = F(s) \cdot G(s)
+\mathcal{L}[\{f(t) * g(t)\}] = F(s) \cdot G(s)
 $$
 
 **解释：**
@@ -817,7 +817,7 @@ $$
 对这个表达式进行拉普拉斯变换：
 
 $$
-\mathcal{L}\{(f * g)(t)\} = \mathcal{L}\left( \int_0^t f(\tau) g(t - \tau) \, d\tau \right)
+\mathcal{L}[\{(f * g)(t)\}] = \mathcal{L}\left( \int_0^t f(\tau) g(t - \tau) \, d\tau \right)
 $$
 
 通过改变积分变量，得到：
@@ -829,7 +829,7 @@ $$
 交换积分顺序并利用拉普拉斯变换的线性性质，最终可以得到：
 
 $$
-\mathcal{L}\{(f * g)(t)\} = F(s) \cdot G(s)
+\mathcal{L}[\{(f * g)(t)\}] = F(s) \cdot G(s)
 $$
 
 这就证明了卷积在拉普拉斯域中等价于两个函数的乘积。
@@ -841,7 +841,7 @@ $$
 卷积与傅里叶变换之间的关系与拉普拉斯变换类似。在傅里叶变换下，卷积定理为：
 
 $$
-\mathcal{F}\{f(t) * g(t)\} = \mathcal{F}\{f(t)\} \cdot \mathcal{F}\{g(t)\}
+\mathcal{F}[\{f(t) * g(t)\}] = \mathcal{F}[\{f(t)\}] \cdot \mathcal{F}[\{g(t)\}]
 $$
 
 这意味着，时域中的卷积在频域中也可以转化为代数乘法。
