@@ -65,7 +65,7 @@ $$
 1. **线性性质**：
 
 $$
-\mathcal{L}\{af(t) + bg(t)\} = aF(s) + bG(s) 
+\mathcal{L}[\{af(t) + bg(t)\}] = aF(s) + bG(s) 
 $$
 
 2. **时间移位性质**：
@@ -83,7 +83,7 @@ $$
 
 
 $$
-\mathcal{L}\{f(t)\} = \int_{0}^{\infty} e^{-st} f(t) \, dt
+\mathcal{L}[\{f(t)\}] = \int_{0}^{\infty} e^{-st} f(t) \, dt
 $$
 
 
